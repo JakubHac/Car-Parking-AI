@@ -1,3 +1,5 @@
+https://www.youtube.com/watch?v=bT3SV1SLqHA
+
 install miniconda
 https://docs.conda.io/projects/conda/en/stable/
 
