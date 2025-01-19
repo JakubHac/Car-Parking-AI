@@ -4,5 +4,9 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/ML-Agents/Examples/Crawler/Scenes/Crawler.unity
+    guid: 7ada20f4d7ae04f2d946cac21135ecbd
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
