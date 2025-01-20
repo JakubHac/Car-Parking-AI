@@ -7,10 +7,10 @@ using Random = UnityEngine.Random;
 public class ParkedCarsSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] Prefabs;
-    [SerializeField] private int FreeSpots = 1;
+    [SerializeField] private int FreeSpots = 8;
 
-    public IEnumerable<SpawnPoint> GetFreeSpawnPoints => _spawnPoints[FreeSpots..];
-    private SpawnPoint[] _spawnPoints;
+    public IEnumerable<SpawnPoint> GetFreeSpawnPoints => _spawnPoints[..FreeSpots];
+    private SpawnPoint[] _spawnPoints = Array.Empty<SpawnPoint>();
 
     public record SpawnPoint
     {
@@ -23,37 +23,30 @@ public class ParkedCarsSpawner : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        _spawnPoints = new SpawnPoint[transform.childCount];
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            var child = transform.GetChild(i);
-            _spawnPoints[i] = new SpawnPoint(position: child.position, rotation: child.rotation);
-            Destroy(child.gameObject);
-        }
-
-        SpawnCars();
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ClearSpawnedCars();
-            SpawnCars();
-        }
-    }
-
     public void ClearSpawnedCars()
     {
+        if (_spawnPoints.Length == 0)
+        {
+            SaveSpawnPoints();
+        }
+
         for (int i = 0; i < transform.childCount; i++)
         {
             Destroy(transform.GetChild(i).gameObject);
         }
     }
 
-    private void SpawnCars()
+    private void SaveSpawnPoints()
+    {
+        _spawnPoints = new SpawnPoint[transform.childCount];
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            var child = transform.GetChild(i);
+            _spawnPoints[i] = new SpawnPoint(position: child.position, rotation: child.rotation);
+        }
+    }
+
+    public void SpawnCars()
     {
         var toSpawn = _spawnPoints.Length - FreeSpots;
         _spawnPoints = _spawnPoints.Select(x => (point: x, random: Random.value)).OrderBy(x => x.random).Select(x => x.point).ToArray();
