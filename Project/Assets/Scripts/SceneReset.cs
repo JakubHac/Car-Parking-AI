@@ -26,7 +26,7 @@ public class SceneReset : MonoBehaviour
         }
     }
 
-    private void ResetScene()
+    public void ResetScene()
     {
         ResetMainCar();
         _carsSpawner.ClearSpawnedCars();
