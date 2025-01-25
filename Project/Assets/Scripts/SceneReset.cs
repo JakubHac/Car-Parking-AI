@@ -34,6 +34,7 @@ public class SceneReset : MonoBehaviour
 
         var possiblePoints = _carsSpawner.GetFreeSpawnPoints.ToArray();
         var randomPoint = possiblePoints[Random.Range(0, possiblePoints.Length)];
+        //var randomPoint = possiblePoints[2];
         _designatedParkingSpot.position = randomPoint.Position;
         _designatedParkingSpot.rotation = randomPoint.Rotation;
     }
@@ -42,9 +43,11 @@ public class SceneReset : MonoBehaviour
     {
         _carRigidbody.linearVelocity = Vector3.zero;
         _carRigidbody.angularVelocity = Vector3.zero;
-        var initialCarPosition = new Vector3(Random.Range(_minMaxCarX.x, _minMaxCarX.y), 0f, Random.Range(_minMaxCarZ.x, _minMaxCarZ.y));
+        // var initialCarPosition = new Vector3(Random.Range(_minMaxCarX.x, _minMaxCarX.y), 0f, Random.Range(_minMaxCarZ.x, _minMaxCarZ.y)) + transform.position;
+        var initialCarPosition = new Vector3(_minMaxCarX.x, 0f, _minMaxCarZ.x) + transform.position;
         _carController.transform.position = initialCarPosition;
-        _carController.transform.rotation = Quaternion.Euler(0f, Random.Range(0, 360), 0f);
+        //_carController.transform.rotation = Quaternion.Euler(0f, Random.Range(0, 360), 0f);
+        _carController.transform.rotation = Quaternion.Euler(0f, 156f, 0f);
         foreach (var wheel in _wheels)
         {
             wheel.motorTorque = 0;

@@ -44,6 +44,11 @@ public class ParkedCarsSpawner : MonoBehaviour
             var child = transform.GetChild(i);
             _spawnPoints[i] = new SpawnPoint(position: child.position, rotation: child.rotation);
         }
+        // int[] randomValues = new int[]
+        // {
+        //     -255, -200, -150, -100, -50, 0, 50, 100, 150, 200, 255, -254, -199, -149, -99, -49, 1, 51, 101, 151, 201, 254, -253, -198, -148, -98, -48, 2, 52, 102, 152, 202, 253, -252, -197, -147, -97, -47, 3, 53, 103, 153, 203, 252, -251, -196, -146, -96, -46, 4, 54, 104, 154, 204, 251, -250, -195, -145, -95, -45, 5, 55, 105, 155, 205, 250
+        // };
+        // _spawnPoints = _spawnPoints.Select((x, i) => (point: x, random: randomValues[i])).OrderBy(x => x.random).Select(x => x.point).ToArray();
     }
 
     public void SpawnCars()
