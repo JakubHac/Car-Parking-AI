@@ -1026,7 +1026,7 @@ MonoBehaviour:
   - {fileID: 6452039197999972492, guid: 813df9801c30e63479934f054db68d12, type: 3}
   - {fileID: 8160049463398649625, guid: 66f97e68ed002b74f8e181d1c3108e14, type: 3}
   - {fileID: 9181701585240893179, guid: 350735ef3b951a54ba6ec49c663c667e, type: 3}
-  FreeSpots: 8
+  FreeSpots: 1
 --- !u!1 &8141310151911035290
 GameObject:
   m_ObjectHideFlags: 0
@@ -4905,15 +4905,17 @@ MonoBehaviour:
   _carTarget: {fileID: 161191394145789288}
   _carController: {fileID: 6327583917016780133}
   desiredDistance: 0.1
-  distancePenaltyMultiplier: 5
   desiredSpeed: 0
   desiredAngle: 3
-  anglePenaltyMultiplier: 0.1
   _customMaxStep: 2500
   _distanceRewardSteps: 100
   _distanceRewardPerStep: 1
   _backwardsPenalty: 0.005
   _rewardText: {fileID: 0}
+  _speedObservation: 0
+  _distanceObservation: 0
+  _desiredAngleObservation: 0
+  _angleToTargetObservation: 0
   CurrentReward: 0
 --- !u!114 &4902173573720589190
 MonoBehaviour:

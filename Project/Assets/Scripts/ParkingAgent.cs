@@ -97,7 +97,7 @@ namespace DefaultNamespace
 
             if (isDone)
             {
-                AddReward(100f * remainingStepsNormalized);
+                AddReward(100f * remainingStepsNormalized + 10f);
                 EndEpisode();
             }
 
@@ -120,7 +120,7 @@ namespace DefaultNamespace
         private void AlignmentReward(float remainingStepsNormalized)
         {
             var angle = GetDiffToDesiredAngle();
-            AddReward(1f - Mathf.Abs(angle) * remainingStepsNormalized * 0.01f);
+            AddReward((1f - Mathf.Abs(angle)) * remainingStepsNormalized * 0.01f);
         }
 
         private void DistanceReward(float distance, float remainingStepsNormalized)
