@@ -4907,7 +4907,7 @@ MonoBehaviour:
   desiredDistance: 0.1
   desiredSpeed: 0
   desiredAngle: 3
-  _customMaxStep: 2500
+  _customMaxStep: 10000
   _distanceRewardSteps: 100
   _distanceRewardPerStep: 1
   _backwardsPenalty: 0.005
@@ -4957,7 +4957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DecisionPeriod: 5
+  DecisionPeriod: 1
   DecisionStep: 0
   TakeActionsBetweenDecisions: 1
 --- !u!1001 &6421646161921801534

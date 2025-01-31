@@ -269,7 +269,7 @@ PrefabInstance:
     - target: {fileID: 4136058645928624697, guid: 8ee6f963aab60d94383e8591eca47ea6,
         type: 3}
       propertyPath: DecisionStep
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -422,7 +422,7 @@ PrefabInstance:
     - target: {fileID: 4136058645928624697, guid: 8ee6f963aab60d94383e8591eca47ea6,
         type: 3}
       propertyPath: DecisionStep
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -745,7 +745,7 @@ PrefabInstance:
     - target: {fileID: 4136058645928624697, guid: 8ee6f963aab60d94383e8591eca47ea6,
         type: 3}
       propertyPath: DecisionStep
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1056,7 +1056,7 @@ PrefabInstance:
     - target: {fileID: 4136058645928624697, guid: 8ee6f963aab60d94383e8591eca47ea6,
         type: 3}
       propertyPath: DecisionStep
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4136058645928624697, guid: 8ee6f963aab60d94383e8591eca47ea6,
         type: 3}
@@ -1245,7 +1245,7 @@ PrefabInstance:
     - target: {fileID: 4136058645928624697, guid: 8ee6f963aab60d94383e8591eca47ea6,
         type: 3}
       propertyPath: DecisionStep
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1401,7 +1401,7 @@ PrefabInstance:
     - target: {fileID: 4136058645928624697, guid: 8ee6f963aab60d94383e8591eca47ea6,
         type: 3}
       propertyPath: DecisionStep
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4136058645928624697, guid: 8ee6f963aab60d94383e8591eca47ea6,
         type: 3}
@@ -1484,7 +1484,7 @@ PrefabInstance:
     - target: {fileID: 4136058645928624697, guid: 8ee6f963aab60d94383e8591eca47ea6,
         type: 3}
       propertyPath: DecisionStep
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1562,7 +1562,7 @@ PrefabInstance:
     - target: {fileID: 4136058645928624697, guid: 8ee6f963aab60d94383e8591eca47ea6,
         type: 3}
       propertyPath: DecisionStep
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4136058645928624697, guid: 8ee6f963aab60d94383e8591eca47ea6,
         type: 3}
@@ -1723,7 +1723,7 @@ PrefabInstance:
     - target: {fileID: 4136058645928624697, guid: 8ee6f963aab60d94383e8591eca47ea6,
         type: 3}
       propertyPath: DecisionStep
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1910,7 +1910,7 @@ PrefabInstance:
     - target: {fileID: 4136058645928624697, guid: 8ee6f963aab60d94383e8591eca47ea6,
         type: 3}
       propertyPath: DecisionStep
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2067,7 +2067,7 @@ PrefabInstance:
     - target: {fileID: 4136058645928624697, guid: 8ee6f963aab60d94383e8591eca47ea6,
         type: 3}
       propertyPath: DecisionStep
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2145,7 +2145,7 @@ PrefabInstance:
     - target: {fileID: 4136058645928624697, guid: 8ee6f963aab60d94383e8591eca47ea6,
         type: 3}
       propertyPath: DecisionStep
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4136058645928624697, guid: 8ee6f963aab60d94383e8591eca47ea6,
         type: 3}

@@ -20,7 +20,7 @@ namespace DefaultNamespace
         [SerializeField] private int _customMaxStep = 15000;
         [SerializeField] private int _distanceRewardSteps = 100;
         [SerializeField] private int _distanceRewardPerStep = 1;
-        [SerializeField] private float _backwardsPenalty = 0.005f;
+
         [SerializeField] private Text _rewardText;
         [SerializeField] private float _speedObservation;
         [SerializeField] private float _distanceObservation;
@@ -29,7 +29,8 @@ namespace DefaultNamespace
 
         private Vector3 _episodeStartPos;
         private bool _useRewardText = false;
-        private int _defaultLayer = 0;
+        private const int _defaultLayer = 0;
+        private const float _backwardsPenalty = 0.05f;
         [FormerlySerializedAs("_currentReward")] public float CurrentReward = 0;
 
         private void OnCollisionEnter(Collision other)
@@ -97,7 +98,7 @@ namespace DefaultNamespace
 
             if (isDone)
             {
-                AddReward(100f * remainingStepsNormalized + 10f);
+                AddReward(1000f * remainingStepsNormalized);
                 EndEpisode();
             }
 
@@ -120,7 +121,7 @@ namespace DefaultNamespace
         private void AlignmentReward(float remainingStepsNormalized)
         {
             var angle = GetDiffToDesiredAngle();
-            AddReward((1f - Mathf.Abs(angle)) * remainingStepsNormalized * 0.01f);
+            AddReward((1f - Mathf.Abs(angle)) * remainingStepsNormalized * 0.001f);
         }
 
         private void DistanceReward(float distance, float remainingStepsNormalized)
@@ -129,7 +130,7 @@ namespace DefaultNamespace
             float currentNomalizedDistance = Mathf.Clamp01(distance / startingDistance);
             int distanceSteps = Mathf.FloorToInt((1f - currentNomalizedDistance) * _distanceRewardSteps);
 
-            AddReward(distanceSteps * _distanceRewardPerStep * remainingStepsNormalized * 0.05f);
+            AddReward(distanceSteps * _distanceRewardPerStep * remainingStepsNormalized * 0.005f);
         }
     }
 }
