@@ -4582,7 +4582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 627556911, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       propertyPath: maxSpeed
-      value: 120
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 627556911, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       propertyPath: useSounds
@@ -4610,7 +4610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 627556911, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       propertyPath: handbrakeDriftMultiplier
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 901333271, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       propertyPath: m_Layer
@@ -4907,10 +4907,9 @@ MonoBehaviour:
   desiredDistance: 0.1
   desiredSpeed: 0
   desiredAngle: 3
-  _customMaxStep: 10000
-  _distanceRewardSteps: 100
-  _distanceRewardPerStep: 1
-  _backwardsPenalty: 0.005
+  _customMaxStep: 2500
+  _distanceRewardSteps: 10
+  _distanceRewardPerStep: 10
   _rewardText: {fileID: 0}
   _speedObservation: 0
   _distanceObservation: 0
@@ -4957,7 +4956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DecisionPeriod: 1
+  DecisionPeriod: 5
   DecisionStep: 0
   TakeActionsBetweenDecisions: 1
 --- !u!1001 &6421646161921801534

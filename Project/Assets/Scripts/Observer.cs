@@ -12,7 +12,6 @@ namespace DefaultNamespace
         [SerializeField] private Rigidbody _carRigidbody;
         [SerializeField] private Vector3 _direction;
 
-
         private void Update()
         {
             _speedObservation = _carRigidbody.linearVelocity.magnitude / 25f;

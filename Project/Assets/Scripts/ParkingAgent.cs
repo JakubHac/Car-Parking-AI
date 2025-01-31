@@ -26,16 +26,17 @@ namespace DefaultNamespace
         [SerializeField] private float _distanceObservation;
         [SerializeField] private float _desiredAngleObservation;
         [SerializeField] private float _angleToTargetObservation;
+        [SerializeField] private bool _presentationMode = false;
 
         private Vector3 _episodeStartPos;
         private bool _useRewardText = false;
         private const int _defaultLayer = 0;
-        private const float _backwardsPenalty = 0.05f;
+        private const float _backwardsPenalty = 0.005f;
         [FormerlySerializedAs("_currentReward")] public float CurrentReward = 0;
 
         private void OnCollisionEnter(Collision other)
         {
-            if (other.gameObject.layer == _defaultLayer)
+            if (!_presentationMode && other.gameObject.layer == _defaultLayer)
             {
                 int remainingSteps = _customMaxStep - StepCount;
                 float remainingStepsNormalized = remainingSteps / (float) _customMaxStep;
@@ -74,11 +75,13 @@ namespace DefaultNamespace
 
         public override void OnActionReceived(ActionBuffers actions)
         {
-            var aiMovement = actions.DiscreteActions[0];
+            int aiMovement = Input.anyKey ? 3 : actions.DiscreteActions[0];
+
             _carController.AiWantsToGoForward = aiMovement < 3;
             _carController.AiWantsToGoBackward = aiMovement > 3;
             _carController.AiWantsToTurnLeft = aiMovement is 0 or 2;
             _carController.AiWantsToTurnRight = aiMovement is 4 or 6;
+
 
             if (_carController.AiWantsToGoBackward)
             {
@@ -96,7 +99,7 @@ namespace DefaultNamespace
             int remainingSteps = _customMaxStep - StepCount;
             float remainingStepsNormalized = remainingSteps / (float) _customMaxStep;
 
-            if (isDone)
+            if (!_presentationMode && isDone)
             {
                 AddReward(1000f * remainingStepsNormalized);
                 EndEpisode();
@@ -112,7 +115,7 @@ namespace DefaultNamespace
                 _rewardText.text = CurrentReward.ToString("F2");
             }
 
-            if (StepCount >= _customMaxStep)
+            if (!_presentationMode && StepCount >= _customMaxStep)
             {
                 EpisodeInterrupted();
             }

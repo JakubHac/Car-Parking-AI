@@ -324,14 +324,14 @@ WheelCollider:
   m_ForwardFriction:
     m_ExtremumSlip: 1
     m_ExtremumValue: 1
-    m_AsymptoteSlip: 1
-    m_AsymptoteValue: 1
+    m_AsymptoteSlip: 0.1
+    m_AsymptoteValue: 0.1
     m_Stiffness: 1
   m_SidewaysFriction:
     m_ExtremumSlip: 1
     m_ExtremumValue: 1
-    m_AsymptoteSlip: 1
-    m_AsymptoteValue: 1
+    m_AsymptoteSlip: 0.1
+    m_AsymptoteValue: 0.1
     m_Stiffness: 1
   m_IncludeLayers:
     serializedVersion: 2
@@ -395,14 +395,14 @@ WheelCollider:
   m_ForwardFriction:
     m_ExtremumSlip: 1
     m_ExtremumValue: 1
-    m_AsymptoteSlip: 1
-    m_AsymptoteValue: 1
+    m_AsymptoteSlip: 0.1
+    m_AsymptoteValue: 0.1
     m_Stiffness: 1
   m_SidewaysFriction:
     m_ExtremumSlip: 1
     m_ExtremumValue: 1
-    m_AsymptoteSlip: 1
-    m_AsymptoteValue: 1
+    m_AsymptoteSlip: 0.1
+    m_AsymptoteValue: 0.1
     m_Stiffness: 1
   m_IncludeLayers:
     serializedVersion: 2
@@ -466,14 +466,14 @@ WheelCollider:
   m_ForwardFriction:
     m_ExtremumSlip: 1
     m_ExtremumValue: 1
-    m_AsymptoteSlip: 1
-    m_AsymptoteValue: 1
+    m_AsymptoteSlip: 0.1
+    m_AsymptoteValue: 0.1
     m_Stiffness: 1
   m_SidewaysFriction:
     m_ExtremumSlip: 1
     m_ExtremumValue: 1
-    m_AsymptoteSlip: 1
-    m_AsymptoteValue: 1
+    m_AsymptoteSlip: 0.1
+    m_AsymptoteValue: 0.1
     m_Stiffness: 1
   m_IncludeLayers:
     serializedVersion: 2
@@ -830,14 +830,14 @@ WheelCollider:
   m_ForwardFriction:
     m_ExtremumSlip: 1
     m_ExtremumValue: 1
-    m_AsymptoteSlip: 1
-    m_AsymptoteValue: 1
+    m_AsymptoteSlip: 0.1
+    m_AsymptoteValue: 0.1
     m_Stiffness: 1
   m_SidewaysFriction:
     m_ExtremumSlip: 1
     m_ExtremumValue: 1
-    m_AsymptoteSlip: 1
-    m_AsymptoteValue: 1
+    m_AsymptoteSlip: 0.1
+    m_AsymptoteValue: 0.1
     m_Stiffness: 1
   m_IncludeLayers:
     serializedVersion: 2
